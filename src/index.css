@@ -7,9 +7,11 @@
     text-decoration: none;
     box-sizing: border-box;
 }
+
 :root{
     /* --primary-hue: 20;
     --gray-hue: 280; */
+
     --primary-hue: 210;
     --gray-hue: 240;
     --color-primary: hsl(var(--primary-hue), 100%, 50%);
@@ -28,3 +30,41 @@
     --transition: all 500ms ease;
 }
 
+/* -----general styles---------------- */
+body {
+    font-family: "montserrat", sans-serif;
+    color: var(--color-gray-200);
+    line-height: 1.7;
+    overflow: hidden;
+    background: var(--color-gray-600);
+}
+
+.container{
+    width: var(--container-width-lg);
+    max-width: 1920px;
+    margin-inline: auto;
+    /* margin: 0 auto; same as above; */
+}
+
+h1, h2, h3, h4, h5{
+    line-height: 1.2;
+    color: var(--color-gray-100);
+}
+
+h1{
+    font-size: 3rem;
+}
+
+h2{
+    font-size: 2rem;
+}
+
+a{
+    color: var(--color-gray-100);
+}
+
+img{
+    display: block;
+    object-fit: cover;
+    width: 100%;
+}
