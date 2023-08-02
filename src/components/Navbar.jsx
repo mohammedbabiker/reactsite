@@ -7,9 +7,7 @@ import { MdOutlineClose } from "react-icons/md";
 import "./navbar.css";
 
 const Navbar = () => {
-    const [isNavShowing, setIsNavShowing] = useState(false);
-
-
+  const [isNavShowing, setIsNavShowing] = useState(false);
 
   return (
     <nav>
@@ -17,19 +15,28 @@ const Navbar = () => {
         <Link to="/" className="logo" onClick={() => setIsNavShowing(false)}>
           <img src={Logo} alt="nav logo" />
         </Link>
-        <ul className={`nav__links ${isNavShowing ? "show__nav" : "hide__nav"}`}>
+        <ul
+          className={`nav__links ${isNavShowing ? "show__nav" : "hide__nav"}`}
+        >
           {links.map(({ name, path }, index) => {
             return (
               <li key={index}>
-                <NavLink to={path} className={({isActive}) => isActive ? "active-nav" : ""} onClick={() => setIsNavShowing(prev => !prev)}>{name}</NavLink>
+                <NavLink
+                  to={path}
+                  className={({ isActive }) => (isActive ? "active-nav" : "")}
+                  onClick={() => setIsNavShowing((prev) => !prev)}
+                >
+                  {name}
+                </NavLink>
               </li>
             );
           })}
         </ul>
-        <button className="nav__toggle-btn" onClick={() => setIsNavShowing(prev => !prev)}>
-          {
-            isNavShowing ? <MdOutlineClose/>: <GoMoveToStart />
-          }
+        <button
+          className="nav__toggle-btn"
+          onClick={() => setIsNavShowing((prev) => !prev)}
+        >
+          {isNavShowing ? <MdOutlineClose /> : <GoMoveToStart />}
         </button>
       </div>
     </nav>
