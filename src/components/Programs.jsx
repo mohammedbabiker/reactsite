@@ -6,6 +6,7 @@ const Programs = () => {
       <div className="container programs__container">
         <div className="programs__head">
           <span>{<FaCrown />}</span>
+          <h2>Programs</h2>
         </div>
       </div>
     </section>
