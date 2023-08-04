@@ -1,12 +1,12 @@
-import Header from "../../components/Header"
-import "./home.css"
+import MainHeader from "../../components/MainHeader";
+import "./home.css";
 
 const Home = () => {
   return (
     <>
-    <Header/>
+      <MainHeader />
     </>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
