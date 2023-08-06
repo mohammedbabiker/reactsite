@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import Logo from "../images/logo.png";
 import { links } from "../data";
-import { GoMoveToStart } from "react-icons/go";
+import { FaBars } from "react-icons/fa";
 import { MdOutlineClose } from "react-icons/md";
 import "./navbar.css";
 
@@ -36,7 +36,7 @@ const Navbar = () => {
           className="nav__toggle-btn"
           onClick={() => setIsNavShowing((prev) => !prev)}
         >
-          {isNavShowing ? <MdOutlineClose /> : <GoMoveToStart />}
+          {isNavShowing ? <MdOutlineClose /> : <FaBars />}
         </button>
       </div>
     </nav>
