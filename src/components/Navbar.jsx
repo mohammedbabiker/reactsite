@@ -34,6 +34,7 @@ const Navbar = () => {
         </ul>
         <button
           className="nav__toggle-btn"
+          title="button toggler"
           onClick={() => setIsNavShowing((prev) => !prev)}
         >
           {isNavShowing ? <MdOutlineClose /> : <FaBars />}
